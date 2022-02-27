@@ -1,0 +1,21 @@
+.react-pdf__Document {
+    width: 80%;
+    min-width: 450px;
+    position: relative;
+}
+
+.react-pdf__Page__svg {
+    display: flex !important;
+    justify-content: center;
+    width: 100% !important;
+    height: auto !important;
+    font-weight: 600;
+}
+
+.react-pdf__Page__svg svg {
+    width: 75%;
+    height: auto;
+    max-height: 1200px;
+    min-height: 600px;
+    min-width: 450px;
+}
