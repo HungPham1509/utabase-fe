@@ -7,7 +7,7 @@ const getIcon = (name) => <Iconify icon={name} width={22} height={22} />;
 
 const sidebarConfig = [
   {
-    title: 'ダッシュボード',
+    title: 'ホーム',
     path: '/dashboard/app',
     icon: getIcon('eva:pie-chart-2-fill')
   },
@@ -17,7 +17,7 @@ const sidebarConfig = [
   //   icon: getIcon('eva:people-fill')
   // },
   {
-    title: '書類',
+    title: '種類',
     path: '/dashboard/document',
     icon: getIcon('eva:file-text-fill')
   },
@@ -32,7 +32,7 @@ const sidebarConfig = [
   //   icon: getIcon('eva:person-add-fill')
   // },
   {
-    title: 'フィードバック',
+    title: 'その他',
     path: '/dashboard/feedback',
     icon: getIcon('ic:baseline-feedback')
   }

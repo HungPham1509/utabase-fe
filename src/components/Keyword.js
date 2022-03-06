@@ -24,7 +24,7 @@ const TOTAL = 15;
 export default function Keyword(props) {
   return (
     <RootStyle>
-      <Typography variant="h3">Keyword</Typography>
+      <Typography variant="h3">キーワード</Typography>
       <Typography variant="subtitle2" sx={{ opacity: 0.72, mt: 5 }}>
         {props.description}
       </Typography>

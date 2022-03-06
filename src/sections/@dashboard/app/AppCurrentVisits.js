@@ -31,14 +31,14 @@ const ChartWrapperStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-const CHART_DATA = [15, 15, 15];
+const CHART_DATA = [15, 15, 15, 10];
 
 export default function AppCurrentVisits() {
   const theme = useTheme();
 
   const chartOptions = merge(BaseOptionChart(), {
-    colors: [theme.palette.primary.main, theme.palette.info.main, theme.palette.error.main],
-    labels: ['新聞で学ぶ日本語', 'Short stories Vol 3', 'The Great Japanese (中上級)'],
+    colors: [theme.palette.primary.main, theme.palette.info.main, theme.palette.error.main, theme.palette.warning.main],
+    labels: ['新聞で学ぶ日本語', 'Short stories Vol 3', 'The Great Japanese (中上級)', 'ドラえもんのどこでも日本語'],
     stroke: { colors: [theme.palette.background.paper] },
     legend: { floating: true, horizontalAlign: 'center' },
     dataLabels: { enabled: true, dropShadow: { enabled: false } },

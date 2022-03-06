@@ -9,7 +9,7 @@ import DOCUMENTS from '../../_mocks_/document';
 import './DocumentDetails.css';
 import LinkTest from '../../components/LinkTest';
 import Keyword from '../../components/Keyword';
-import { AppNewUsers, AppWeeklySales } from '../../sections/@dashboard/app';
+import Stopwatch from "../../components/Stopwatch";
 
 export default function DocumentDetails() {
   const params = useParams();
@@ -43,13 +43,13 @@ export default function DocumentDetails() {
           <Typography variant="h4">{document.title}</Typography>
         </Box>
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid item xs={12} sm={4} md={2}>
             <LinkTest url={document.testUrl} />
           </Grid>
-          <Grid item xs={12} sm={6} md={6}>
+          <Grid item xs={12} sm={6} md={5}>
             <Keyword description={document.description} />
           </Grid>
-
+          <Stopwatch />
           <Grid item xs={12} md={12} lg={12}>
             <Document
               file={document.documentUrl}
@@ -66,7 +66,7 @@ export default function DocumentDetails() {
                 shape="rounded"
                 sx={{
                   position: 'absolute',
-                  bottom: 0,
+                  top: 15,
                   left: '50%',
                   transform: 'translate(-50%, -50%)'
                 }}

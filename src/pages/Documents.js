@@ -12,7 +12,7 @@ import DocumentCard from '../sections/@dashboard/blog/DocumentCard';
 
 const SORT_OPTIONS = [
   { value: 'latest', label: '最新' },
-  { value: 'popular', label: '人気' },
+  { value: 'popular', label: '視聴回数' },
   { value: 'oldest', label: '最古' }
 ];
 
@@ -57,7 +57,6 @@ export default function Documents() {
   }
 
   useEffect(() => {
-    console.log(sortValue);
     setFilterDocument(DOCUMENTS);
   }, []);
 
@@ -105,6 +104,13 @@ export default function Documents() {
               variant={type === 3 ? 'contained' : 'outlined'}
             >
               The Great Japanese (中上級)
+            </Button>
+            <Button
+                fullWidth="100%"
+                onClick={() => handleFilterClick(4)}
+                variant={type === 4 ? 'contained' : 'outlined'}
+            >
+              ドラえもんのどこでも日本語
             </Button>
           </Stack>
           <BlogPostsSort
