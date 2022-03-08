@@ -46,7 +46,7 @@ export default function DocumentDetails() {
           <Grid item xs={12} sm={4} md={2}>
             <LinkTest url={document.testUrl} />
           </Grid>
-          <Grid item xs={12} sm={6} md={5}>
+          <Grid item xs={12} sm={6} md={4}>
             <Keyword description={document.description} />
           </Grid>
           <Stopwatch />

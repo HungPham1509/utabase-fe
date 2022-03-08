@@ -13,7 +13,7 @@ import DocumentCard from '../sections/@dashboard/blog/DocumentCard';
 const SORT_OPTIONS = [
   { value: 'latest', label: '最新' },
   { value: 'popular', label: '視聴回数' },
-  { value: 'oldest', label: '最古' }
+  { value: 'rating', label: '人気' }
 ];
 
 // ----------------------------------------------------------------------
@@ -41,7 +41,7 @@ export default function Documents() {
 
   function sortByValue(doc1, doc2) {
     if (sortValue === 'latest') return doc2.createdAt - doc1.createdAt;
-    if (sortValue === 'oldest') return doc1.createdAt - doc2.createdAt;
+    if (sortValue === 'rating') return doc2.rating - doc1.rating;
     if (sortValue === 'popular') return doc2.view - doc1.view;
     return doc2.createdAt - doc1.createdAt;
   }
@@ -50,8 +50,8 @@ export default function Documents() {
     const tmp = filterDocuments.slice();
     if (value === 'latest')
       setFilterDocument(tmp.sort((doc1, doc2) => doc2.createdAt - doc1.createdAt));
-    else if (value === 'oldest')
-      setFilterDocument(tmp.sort((doc1, doc2) => doc1.createdAt - doc2.createdAt));
+    else if (value === 'rating')
+      setFilterDocument(tmp.sort((doc1, doc2) => doc2.rating - doc1.rating));
     else if (value === 'popular')
       setFilterDocument(tmp.sort((doc1, doc2) => doc2.view - doc1.view));
   }
@@ -61,11 +61,11 @@ export default function Documents() {
   }, []);
 
   return (
-    <PageWrapper title="Dashboard: Document | Minimal-UI">
+    <PageWrapper title="Document">
       <Container>
         <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
           <Typography variant="h4" gutterBottom>
-            書類
+            種類
           </Typography>
         </Stack>
 

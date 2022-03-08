@@ -12,14 +12,8 @@ Logo.propTypes = {
 export default function Logo({ sx }) {
   return (
     <RouterLink to="/">
-      <Stack direction={{ md: 'row', lg: 'row', xl: 'row' }}>
+      <Stack justifyContent='center'>
         <Box component="img" src="/static/logo_utabase.png" sx={{ width: 80, height: 80, ...sx }} />
-        <Box
-          component="img"
-          src="/static/logo_utabase2.png"
-          sx={{ width: 80, height: 80, ...sx }}
-        />
-        <Box component="img" src="/static/Logo_ulis.png" sx={{ width: 80, height: 80, ...sx }} />
       </Stack>
     </RouterLink>
   );

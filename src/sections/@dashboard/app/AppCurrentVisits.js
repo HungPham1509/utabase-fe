@@ -58,7 +58,6 @@ export default function AppCurrentVisits() {
 
   return (
     <Card>
-      <CardHeader title="新聞で学ぶ日本語" />
       <ChartWrapperStyle dir="ltr">
         <ReactApexChart type="pie" series={CHART_DATA} options={chartOptions} height={280} />
       </ChartWrapperStyle>

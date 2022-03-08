@@ -17,9 +17,9 @@ import AppDokoemon from "../sections/@dashboard/app/AppDokoemon";
 
 export default function DashboardApp() {
   return (
-    <PageWrapper title="Dashboard | Minimal-UI">
+    <PageWrapper title="Dashboard">
       <Container maxWidth="xl">
-        <Box component='img' src="/static/cover_photo.png" sx={{width: "100%", height: "auto"}}/>
+        <Box component='img' src="/static/cover_photo2.jpg" sx={{width: "100%", height: "auto", minHeight: '150px', borderRadius: 2}}/>
         <Box sx={{ pb: 5, mt: 2 }}>
           <Typography variant="h4">こんにちは、Uta Base へようこそ！！！</Typography>
           <Typography color="orange" mt={5} variant="h6">
