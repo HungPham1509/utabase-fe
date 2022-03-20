@@ -1,7 +1,8 @@
 import {Box, Container, Grid, Typography} from '@mui/material';
-import PageWrapper from '../components/PageWrapper';
+import PageWrapper from '../components/PageWrapper'
 import {useTheme} from "@mui/material/styles";
 import {FeedbackForm} from "../sections/authentication/register";
+import RecommendTable from "../components/RecommendTable";
 
 export default function Feedback() {
     const theme = useTheme()
@@ -9,6 +10,13 @@ export default function Feedback() {
         <PageWrapper title="Feedback">
             <Container>
                 <Typography variant="h3" gutterBottom sx={{color: theme.palette.error.dark}}>
+                    Recommend (お勧め)
+                </Typography>
+                <Typography variant="h6" ml={2} mb={2} gutterBottom>
+                    ● 読者が豊富な多読資料を持っているのを助けるために、Uta Baseウェブサイトに加えて、他のいくつかのウェブサイトを紹介したいと思います。
+                </Typography>
+                <RecommendTable />
+                <Typography mt={5} variant="h3" gutterBottom sx={{color: theme.palette.error.dark}}>
                     Donate (寄付)
                 </Typography>
                 <Typography variant="h6" ml={2} gutterBottom>

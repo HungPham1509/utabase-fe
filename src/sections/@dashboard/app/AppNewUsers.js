@@ -3,6 +3,7 @@ import { alpha, styled } from '@mui/material/styles';
 import { Card, Typography } from '@mui/material';
 // utils
 import { fShortenNumber } from '../../../utils/formatNumber';
+import * as constant from '../../../_mocks_/constant';
 // component
 import Iconify from '../../../components/Iconify';
 
@@ -44,7 +45,7 @@ export default function AppNewUsers() {
       </IconWrapperStyle>
       <Typography variant="h3">{fShortenNumber(TOTAL)}</Typography>
       <Typography variant="subtitle2" sx={{ opacity: 0.72 }}>
-        Short stories Vol 3
+        {constant.SHORT_STORY_VOL_3}
       </Typography>
     </RootStyle>
   );

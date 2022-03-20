@@ -3,6 +3,7 @@ import { alpha, styled } from '@mui/material/styles';
 import { Card, Typography } from '@mui/material';
 // utils
 import { fShortenNumber } from '../../../utils/formatNumber';
+import * as constant from '../../../_mocks_/constant';
 //
 import Iconify from '../../../components/Iconify';
 
@@ -44,7 +45,7 @@ export default function AppItemOrders() {
       </IconWrapperStyle>
       <Typography variant="h3">{fShortenNumber(TOTAL)}</Typography>
       <Typography variant="subtitle2" sx={{ opacity: 0.72 }}>
-        The Great Japanese (中上級)
+        {constant.THE_GREATEST_JAPANESE}
       </Typography>
     </RootStyle>
   );

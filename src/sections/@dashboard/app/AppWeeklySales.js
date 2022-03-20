@@ -3,6 +3,7 @@ import { alpha, styled } from '@mui/material/styles';
 import { Card, Typography } from '@mui/material';
 // utils
 import { fShortenNumber } from '../../../utils/formatNumber';
+import * as constant from '../../../_mocks_/constant'
 // component
 import Iconify from '../../../components/Iconify';
 
@@ -44,7 +45,7 @@ export default function AppWeeklySales() {
       </IconWrapperStyle>
       <Typography variant="h3">{fShortenNumber(TOTAL)}</Typography>
       <Typography variant="subtitle2" sx={{ opacity: 0.72 }}>
-        新聞で学ぶ日本語
+        {constant.NEWS}
       </Typography>
     </RootStyle>
   );

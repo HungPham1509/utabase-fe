@@ -5,6 +5,7 @@ import { useTheme, styled } from '@mui/material/styles';
 import { Card, CardHeader } from '@mui/material';
 // utils
 import { fNumber } from '../../../utils/formatNumber';
+import * as constant from '../../../_mocks_/constant';
 //
 import { BaseOptionChart } from '../../../components/charts';
 
@@ -38,7 +39,7 @@ export default function AppCurrentVisits() {
 
   const chartOptions = merge(BaseOptionChart(), {
     colors: [theme.palette.primary.main, theme.palette.info.main, theme.palette.error.main, theme.palette.warning.main],
-    labels: ['新聞で学ぶ日本語', 'Short stories Vol 3', 'The Great Japanese (中上級)', 'ドラえもんのどこでも日本語'],
+    labels: [constant.NEWS, constant.SHORT_STORY_VOL_3, constant.THE_GREATEST_JAPANESE, constant.DOKOEMON],
     stroke: { colors: [theme.palette.background.paper] },
     legend: { floating: true, horizontalAlign: 'center' },
     dataLabels: { enabled: true, dropShadow: { enabled: false } },
