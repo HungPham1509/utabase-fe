@@ -1,7 +1,7 @@
 export const NEWS = "新聞で学ぶ日本語 : 読んで話す現代の日本"
 export const THE_GREATEST_JAPANESE = "The Great Japanese 30の物語 （中上級）"
 export const SHORT_STORY_VOL_3 = "どんどん読める！ 日本語ショートストーリーズ vol.３"
-export const DOKOEMON = "'ドラえもんのどこでも日本語'"
+export const DOKOEMON = "ドラえもんのどこでも日本語"
 
 export const BOOK_INFO = [
     {

@@ -27,7 +27,10 @@ export default function DashboardApp() {
           </Typography>
           <Typography color="orange" mt={2} variant="subtitle2">
             現在、多読の概念がたくさんあります。多読とは文字通り多量の文章を読むことである。Longman Dictionary of Language Teaching and Applied Linguisticsでは多読について"Develop good reading habits, to build up knowledge of vocabulary and structure, and to encourage a liking for reading"と述べます。多読を行う際は、返り読みをせず読み進めていく他、辞書を使わない方がいいです。この方法は、読書習慣を身につけ、読みスキルを改善しています。
-            このウェブサイトでは次のような物があります。読むために「種類」のところをクリックしてください。
+            このウェブサイトでは次のような物があります。
+          </Typography>
+          <Typography color="green" mt={2} variant="h5">
+            読むために「種類」のところをクリックしてください。
           </Typography>
         </Box>
         <Grid container spacing={3}>

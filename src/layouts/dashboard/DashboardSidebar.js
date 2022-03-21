@@ -58,7 +58,7 @@ export default function DashboardSidebar({ isOpenSidebar, onCloseSidebar }) {
 
       <Box sx={{ flexGrow: 1 }} />
       <Typography variant="subtitle2" color="orangered" m={2}>
-        2022年03月14日から04月03日まで実施されるテストウェブサイトです。
+        2022年03月21日から04月03日まで体験されるテストウェブサイトです。
       </Typography>
     </Scrollbar>
   );

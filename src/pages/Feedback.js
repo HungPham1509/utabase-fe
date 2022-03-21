@@ -1,4 +1,4 @@
-import {Box, Container, Grid, Typography} from '@mui/material';
+import {Box, Container, Grid, Link, Typography} from '@mui/material';
 import PageWrapper from '../components/PageWrapper'
 import {useTheme} from "@mui/material/styles";
 import {FeedbackForm} from "../sections/authentication/register";
@@ -17,7 +17,7 @@ export default function Feedback() {
                 </Typography>
                 <RecommendTable />
                 <Typography mt={5} variant="h3" gutterBottom sx={{color: theme.palette.error.dark}}>
-                    Donate (寄付)
+                    Cooperation (協力)
                 </Typography>
                 <Typography variant="h6" ml={2} gutterBottom>
                     ● 以下のトピックに関する資料がある場合は、Uta Baseをサポートしてください!!!
@@ -67,6 +67,12 @@ export default function Feedback() {
                 </Typography>
                 <Typography variant="h6" ml={2} gutterBottom>
                     ● ご意見・ご質問・問い合わせがある方は、お気軽に以下のメールフォームよりご連絡ください。
+                </Typography>
+                <Typography variant="h6" ml={2} mt={2} gutterBottom>
+                    ●  私の卒業論文の実施と完成に役立つために、このウェブサイトを体験した後、以下の調査にご協力をよろしくお願いいたします。(Để giúp thực hiện và hoàn thiện khóa luận tốt nghiệp của mình, sau khi trải nghiệm website này, rất mong các bạn hợp tác làm khảo sát dưới đây!!!)
+                </Typography>
+                <Typography variant="subtitle1" ml={2} mt={2} gutterBottom>
+                    リンク: <Link target="_blank" href="https://forms.gle/5NhFfL6wZ8bBE9L8A" underline="hover">https://forms.gle/5NhFfL6wZ8bBE9L8A</Link>
                 </Typography>
                 <Box sx={{mt: 3, ml: 2}}>
                     <FeedbackForm />

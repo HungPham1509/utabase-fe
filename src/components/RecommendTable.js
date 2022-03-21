@@ -38,6 +38,10 @@ const rows = [
     createData('たどくのひろば', "http://tadoku.info"),
     createData('ツナグモノガタリー', "https://monogatary.com"),
     createData('青空文庫', "https://www.aozora.gr.jp"),
+    createData('ベトナムニュース総合情報サイトVIETJO [ベトジョー]', "https://www.viet-jo.com"),
+    createData('世界と日本の童話・昔話集 - 福娘童話集', "http://hukumusume.com/douwa"),
+    createData('News in Slow Japanese', "https://newsinslowjapanese.com"),
+    createData('あかね的日本語教室 – 日本語や日本文化について書きます', "https://akanesenseijp.com")
 ];
 
 export default function RecommendTable() {

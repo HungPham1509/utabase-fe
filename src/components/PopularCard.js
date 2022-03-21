@@ -19,6 +19,7 @@ import DOCUMENTS from "../_mocks_/document";
 import Iconify from "./Iconify";
 import {fShortenNumber} from "../utils/formatNumber";
 import {useNavigate} from "react-router-dom";
+import * as constant from "../_mocks_/constant";
 
 // ==============================|| DASHBOARD DEFAULT - POPULAR CARD ||============================== //
 const gridSpacing = 3
@@ -93,10 +94,10 @@ const PopularCard = ({isLoading}) => {
                             <Grid item xs={12}>
                                 {documents.map((item, index) => {
                                     let genre
-                                    if (item.type === 1) genre = "新聞で学ぶ日本語"
-                                    if (item.type === 2) genre = "Short stories Vol 3"
-                                    if (item.type === 3) genre = "The Great Japanese (中上級)"
-                                    if (item.type === 4) genre = "ドラえもんのどこでも日本語"
+                                    if (item.type === 1) genre = constant.NEWS
+                                    if (item.type === 2) genre = constant.SHORT_STORY_VOL_3
+                                    if (item.type === 3) genre = constant.THE_GREATEST_JAPANESE
+                                    if (item.type === 4) genre = constant.DOKOEMON
 
                                     let divider = (index === documents.length - 1) ? null : <Divider sx={{my: 1.5}}/>
                                     let ranking = (index % 2 === 0) ?
