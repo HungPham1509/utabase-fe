@@ -12,7 +12,8 @@ import Logo from '../../components/Logo';
 import Scrollbar from '../../components/Scrollbar';
 import NavSection from '../../components/NavSection';
 //
-import sidebarConfig from './SidebarConfig';
+import Iconify from "../../components/Iconify";
+import {t} from "i18next";
 
 // ----------------------------------------------------------------------
 
@@ -33,6 +34,46 @@ DashboardSidebar.propTypes = {
 };
 
 export default function DashboardSidebar({ isOpenSidebar, onCloseSidebar }) {
+  const getIcon = (name) => <Iconify icon={name} width={22} height={22} />;
+
+  const sidebarConfig = [
+    {
+      title: t('home'),
+      path: '/dashboard/app',
+      icon: getIcon('eva:pie-chart-2-fill')
+    },
+    // {
+    //   title: 'user',
+    //   path: '/dashboard/user',
+    //   icon: getIcon('eva:people-fill')
+    // },
+    {
+      title: t('category'),
+      path: '/dashboard/document',
+      icon: getIcon('eva:file-text-fill')
+    },
+    // {
+    //   title: 'login',
+    //   path: '/login',
+    //   icon: getIcon('eva:lock-fill')
+    // },
+    // {
+    //   title: 'register',
+    //   path: '/register',
+    //   icon: getIcon('eva:person-add-fill')
+    // },
+    {
+      title: t('more'),
+      path: '/dashboard/feedback',
+      icon: getIcon('ic:baseline-feedback')
+    }
+    // {
+    //   title: 'フィードバック',
+    //   path: '/404',
+    //   icon: getIcon('eva:alert-triangle-fill')
+    // }
+  ];
+
   const { pathname } = useLocation();
 
   const isDesktop = useResponsive('up', 'lg');
@@ -57,9 +98,6 @@ export default function DashboardSidebar({ isOpenSidebar, onCloseSidebar }) {
       <NavSection navConfig={sidebarConfig} />
 
       <Box sx={{ flexGrow: 1 }} />
-      <Typography variant="subtitle2" color="orangered" m={2}>
-        2022年03月21日から04月03日まで体験されるテストウェブサイトです。
-      </Typography>
     </Scrollbar>
   );
 

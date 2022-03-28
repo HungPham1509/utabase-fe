@@ -3,8 +3,9 @@ import PageWrapper from '../components/PageWrapper'
 import {useTheme} from "@mui/material/styles";
 import {FeedbackForm} from "../sections/authentication/register";
 import RecommendTable from "../components/RecommendTable";
+import {withNamespaces} from "react-i18next";
 
-export default function Feedback() {
+function Feedback({t}) {
     const theme = useTheme()
     return (
         <PageWrapper title="Feedback">
@@ -13,14 +14,14 @@ export default function Feedback() {
                     Recommend (お勧め)
                 </Typography>
                 <Typography variant="h6" ml={2} mb={2} gutterBottom>
-                    ● 読者が豊富な多読資料を持っているのを助けるために、Uta Baseウェブサイトに加えて、他のいくつかのウェブサイトを紹介したいと思います。
+                    {t('recommend')}
                 </Typography>
                 <RecommendTable />
                 <Typography mt={5} variant="h3" gutterBottom sx={{color: theme.palette.error.dark}}>
                     Cooperation (協力)
                 </Typography>
                 <Typography variant="h6" ml={2} gutterBottom>
-                    ● 以下のトピックに関する資料がある場合は、Uta Baseをサポートしてください!!!
+                    {t('recommend_2')}
                 </Typography>
                 <Grid container width='90%' spacing={3} sx={{
                     bgcolor: theme.palette.success.lighter,
@@ -31,48 +32,48 @@ export default function Feedback() {
                 }}>
                     <Grid item xs={12} md={6} lg={6}>
                         <Typography variant="subtitle1" gutterBottom>
-                            ● 日本文学
+                            ● {t('jp_literature')}
                         </Typography>
                         <Typography variant="subtitle1" gutterBottom>
-                            ● 歌詞
-                        </Typography>
-                    </Grid>
-                    <Grid item xs={12} md={6} lg={6}>
-                        <Typography variant="subtitle1" gutterBottom>
-                            ● 研究論文
-                        </Typography>
-                        <Typography variant="subtitle1" gutterBottom>
-                            ● 日本ニュース
+                            ● {t('lyrics')}
                         </Typography>
                     </Grid>
                     <Grid item xs={12} md={6} lg={6}>
                         <Typography variant="subtitle1" gutterBottom>
-                            ● 随筆
+                            ● {t('assignment')}
                         </Typography>
                         <Typography variant="subtitle1" gutterBottom>
-                            ● 卒業論文
+                            ● {t('jp_news')}
                         </Typography>
                     </Grid>
                     <Grid item xs={12} md={6} lg={6}>
                         <Typography variant="subtitle1" gutterBottom>
-                            ● 絵本
+                            ● {t('free_style')}
+                        </Typography>
+                        <Typography variant="subtitle1" gutterBottom>
+                            ● {t('final_assignment')}
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12} md={6} lg={6}>
+                        <Typography variant="subtitle1" gutterBottom>
+                            ● {t('comic')}
                         </Typography>
                     </Grid>
                 </Grid>
                 <Typography variant="h6" ml={2} mb={4} gutterBottom>
-                    🡺 メールですぐにご連絡ください：utabase.ulis@gmail.com
+                    🡺 {t('contact')}：utabase.ulis@gmail.com
                 </Typography>
                 <Typography variant="h3" gutterBottom sx={{color: theme.palette.error.dark}}>
                     Feedback ( フィードバック)
                 </Typography>
-                <Typography variant="h6" ml={2} gutterBottom>
-                    ● ご意見・ご質問・問い合わせがある方は、お気軽に以下のメールフォームよりご連絡ください。
-                </Typography>
                 <Typography variant="h6" ml={2} mt={2} gutterBottom>
-                    ●  私の卒業論文の実施と完成に役立つために、このウェブサイトを体験した後、以下の調査にご協力をよろしくお願いいたします。(Để giúp thực hiện và hoàn thiện khóa luận tốt nghiệp của mình, sau khi trải nghiệm website này, rất mong các bạn hợp tác làm khảo sát dưới đây!!!)
+                    ●  {t('feedback_2')}
                 </Typography>
                 <Typography variant="subtitle1" ml={2} mt={2} gutterBottom>
-                    リンク: <Link target="_blank" href="https://forms.gle/5NhFfL6wZ8bBE9L8A" underline="hover">https://forms.gle/5NhFfL6wZ8bBE9L8A</Link>
+                    リンク: <Link target="_blank" href="https://forms.gle/tXZwrmy9GTcuYvRXA" underline="hover">https://forms.gle/5NhFfL6wZ8bBE9L8A</Link>
+                </Typography>
+                <Typography variant="h6" ml={2} gutterBottom>
+                    ● {t('feedback')}
                 </Typography>
                 <Box sx={{mt: 3, ml: 2}}>
                     <FeedbackForm />
@@ -81,3 +82,5 @@ export default function Feedback() {
         </PageWrapper>
     );
 }
+
+export default withNamespaces()(Feedback)

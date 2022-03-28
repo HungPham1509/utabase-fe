@@ -5,6 +5,7 @@ import { Card, Typography } from '@mui/material';
 import { fShortenNumber } from '../utils/formatNumber';
 // component
 import Iconify from './Iconify';
+import {t} from "i18next";
 
 // ----------------------------------------------------------------------
 
@@ -24,7 +25,7 @@ const TOTAL = 15;
 export default function Keyword(props) {
   return (
     <RootStyle>
-      <Typography variant="h3">キーワード</Typography>
+      <Typography variant="h3">{t('keyword')}</Typography>
       <Typography variant="subtitle2" sx={{ opacity: 0.72, mt: 5 }}>
         {props.description}
       </Typography>

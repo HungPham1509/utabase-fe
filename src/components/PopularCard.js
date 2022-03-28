@@ -20,6 +20,7 @@ import Iconify from "./Iconify";
 import {fShortenNumber} from "../utils/formatNumber";
 import {useNavigate} from "react-router-dom";
 import * as constant from "../_mocks_/constant";
+import {t} from "i18next";
 
 // ==============================|| DASHBOARD DEFAULT - POPULAR CARD ||============================== //
 const gridSpacing = 3
@@ -55,7 +56,7 @@ const PopularCard = ({isLoading}) => {
                                 <Grid container alignContent="center" justifyContent="space-between">
                                     <Grid item>
                                         <Typography variant="h4"
-                                                    sx={{color: theme.palette.error.main}}>人気多読ランキング</Typography>
+                                                    sx={{color: theme.palette.error.main}}>{t('rank_chart')}</Typography>
                                     </Grid>
                                     <Grid item>
                                         <MoreHorizOutlinedIcon

@@ -6,10 +6,11 @@ import GlobalStyles from './theme/globalStyles';
 // components
 import ScrollToTop from './components/ScrollToTop';
 import { BaseOptionChartStyle } from './components/charts/BaseOptionChart';
+import {withNamespaces} from "react-i18next";
 
 // ----------------------------------------------------------------------
 
-export default function App() {
+function App({t}) {
   return (
     <ThemeConfig>
       <ScrollToTop />
@@ -19,3 +20,5 @@ export default function App() {
     </ThemeConfig>
   );
 }
+
+export default withNamespaces()(App)

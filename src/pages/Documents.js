@@ -8,17 +8,17 @@ import { BlogPostsSort, BlogPostsSearch } from '../sections/@dashboard/blog';
 import DOCUMENTS from '../_mocks_/document';
 import DocumentCard from '../sections/@dashboard/blog/DocumentCard';
 import * as constant from "../_mocks_/constant"
+import {withNamespaces} from "react-i18next";
+// ----------------------------------------------------------------------
 // ----------------------------------------------------------------------
 
-const SORT_OPTIONS = [
-  { value: 'latest', label: '最新' },
-  { value: 'popular', label: '視聴回数' },
-  { value: 'rating', label: '人気' }
-];
+function Documents({t}) {
+  const SORT_OPTIONS = [
+    { value: 'latest', label: t('latest') },
+    { value: 'popular', label: t('popular') },
+    { value: 'rating', label: t('watch') }
+  ];
 
-// ----------------------------------------------------------------------
-
-export default function Documents() {
   const [filterDocuments, setFilterDocument] = useState(DOCUMENTS);
   const [type, setType] = useState(0);
   const [sortValue, setSortValue] = useState('latest');
@@ -72,7 +72,7 @@ export default function Documents() {
       <Container>
         <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
           <Typography variant="h4" gutterBottom>
-            種類
+            {t('category')}
           </Typography>
         </Stack>
 
@@ -89,7 +89,7 @@ export default function Documents() {
               onClick={() => handleFilterClick(0)}
               variant={type === 0 ? 'contained' : 'outlined'}
             >
-              全て
+              {t('all')}
             </Button>
             <Button
               sx={{fontSize: "12px"}}
@@ -145,3 +145,5 @@ export default function Documents() {
     </PageWrapper>
   );
 }
+export default withNamespaces()(Documents)
+

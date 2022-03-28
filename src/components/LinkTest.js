@@ -5,6 +5,7 @@ import { Card, Link, Typography } from '@mui/material';
 import { fShortenNumber } from '../utils/formatNumber';
 // component
 import Iconify from './Iconify';
+import {t} from "i18next";
 
 // ----------------------------------------------------------------------
 
@@ -40,7 +41,7 @@ export default function LinkTest(props) {
         <Iconify icon="akar-icons:link-chain" width={24} height={24} />
       </IconWrapperStyle>
       <Link target="_blank" href={props.url} sx={{ opacity: 0.72, textDecoration: 'none' }}>
-        Link Test Online
+        {t('test')}
       </Link>
     </RootStyle>
   );

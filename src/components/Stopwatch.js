@@ -4,6 +4,7 @@ import useTimer from '../hooks/useTimer';
 import { formatStopwatch } from '../utils/formatStopwatch';
 import {Button, Card, Grid, Stack, Typography} from "@mui/material";
 import {styled, useTheme} from "@mui/material/styles";
+import {t} from "i18next";
 
 const RootStyle = styled(Card)(({ theme }) => ({
     boxShadow: 'none',
@@ -29,15 +30,15 @@ const Stopwatch = () => {
                 <Stack mt={3} direction={{xs: 'column', sm: 'row', md: 'row', lg: 'row', xl: 'row'}} justifyContent='center'>
                     {
                         !isActive && !isPaused ?
-                            <StyleButton onClick={handleStart}>始める</StyleButton>
+                            <StyleButton onClick={handleStart}>{t('start')}</StyleButton>
                             : (
-                                isPaused ? <StyleButton onClick={handlePause}>一時停止</StyleButton> :
-                                    <StyleButton onClick={handleResume}>続く</StyleButton>
+                                isPaused ? <StyleButton onClick={handlePause}>{t('pause')}</StyleButton> :
+                                    <StyleButton onClick={handleResume}>{t('resume')}</StyleButton>
                             )
                     }
-                    <StyleButton onClick={handleReset} disabled={!isActive}>リセット</StyleButton>
+                    <StyleButton onClick={handleReset} disabled={!isActive}>{t('reset')}</StyleButton>
                 </Stack>
-                <Typography mt={2} variant='subtitle2'>読み時間を計算するためにストップウォッチがあるので、準備ができたら「始める」ボタンをクリックしてください。</Typography>
+                <Typography mt={2} variant='subtitle2'>{t('timer')}</Typography>
             </RootStyle>
         </Grid>
     );

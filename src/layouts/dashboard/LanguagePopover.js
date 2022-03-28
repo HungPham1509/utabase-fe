@@ -1,9 +1,12 @@
-import { useRef, useState } from 'react';
+import {useEffect, useRef, useState} from 'react';
 // material
 import { alpha } from '@mui/material/styles';
 import { Box, MenuItem, ListItemIcon, ListItemText, IconButton } from '@mui/material';
 // components
 import MenuPopover from '../../components/MenuPopover';
+import { withNamespaces } from 'react-i18next';
+import i18n from '../../i18n';
+import DOCUMENTS from "../../_mocks_/document";
 
 // ----------------------------------------------------------------------
 
@@ -22,15 +25,19 @@ const LANGS = [
 
 // ----------------------------------------------------------------------
 
-export default function LanguagePopover() {
+function LanguagePopover() {
   const anchorRef = useRef(null);
   const [open, setOpen] = useState(false);
+  const [lang, setLang] = useState(0);
 
   const handleOpen = () => {
     setOpen(true);
   };
 
-  const handleClose = () => {
+  const handleClose = (language) => {
+    i18n.changeLanguage(language);
+    if (language === 'jp') setLang(0)
+    if (language === 'vn') setLang(1)
     setOpen(false);
   };
 
@@ -48,7 +55,7 @@ export default function LanguagePopover() {
           })
         }}
       >
-        <img src={LANGS[0].icon} alt={LANGS[0].label} />
+        <img src={LANGS[lang].icon} alt={LANGS[lang].label} />
       </IconButton>
 
       <MenuPopover open={open} onClose={handleClose} anchorEl={anchorRef.current}>
@@ -56,8 +63,8 @@ export default function LanguagePopover() {
           {LANGS.map((option) => (
             <MenuItem
               key={option.value}
-              selected={option.value === LANGS[0].value}
-              onClick={handleClose}
+              selected={option.value === LANGS[lang].value}
+              onClick={() => handleClose(option.value)}
               sx={{ py: 1, px: 2.5 }}
             >
               <ListItemIcon>
@@ -73,3 +80,5 @@ export default function LanguagePopover() {
     </>
   );
 }
+
+export default withNamespaces()(LanguagePopover);
