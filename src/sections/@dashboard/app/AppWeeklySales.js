@@ -1,6 +1,6 @@
 // material
 import { alpha, styled } from '@mui/material/styles';
-import { Card, Typography } from '@mui/material';
+import {Box, Card, Typography} from '@mui/material';
 // utils
 import { fShortenNumber } from '../../../utils/formatNumber';
 import * as constant from '../../../_mocks_/constant'
@@ -40,13 +40,12 @@ const TOTAL = 15;
 export default function AppWeeklySales() {
   return (
     <RootStyle>
-      <IconWrapperStyle>
-        <Iconify icon="carbon:document-pdf" width={24} height={24} />
-      </IconWrapperStyle>
-      <Typography variant="h3">{fShortenNumber(TOTAL)}</Typography>
-      <Typography variant="subtitle2" sx={{ opacity: 0.72 }}>
-        {constant.NEWS}
-      </Typography>
+      <Box component="img" src="/static/news.jpg">
+          <Typography variant="h3">{fShortenNumber(TOTAL)}</Typography>
+          <Typography variant="subtitle2" sx={{ opacity: 0.72 }}>
+              {constant.NEWS}
+          </Typography>
+      </Box>
     </RootStyle>
   );
 }
