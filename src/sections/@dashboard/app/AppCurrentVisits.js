@@ -32,7 +32,7 @@ const ChartWrapperStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-const CHART_DATA = [15, 15, 15, 10];
+const CHART_DATA = [15, 20, 15, 10];
 
 export default function AppCurrentVisits() {
   const theme = useTheme();

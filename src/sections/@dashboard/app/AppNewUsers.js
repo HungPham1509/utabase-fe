@@ -35,7 +35,7 @@ const IconWrapperStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-const TOTAL = 15;
+const TOTAL = 20;
 
 export default function AppNewUsers() {
   return (

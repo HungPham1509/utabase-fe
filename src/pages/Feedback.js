@@ -70,7 +70,7 @@ function Feedback({t}) {
                     ●  {t('feedback_2')}
                 </Typography>
                 <Typography variant="subtitle1" ml={2} mt={2} gutterBottom>
-                    リンク: <Link target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdCX1mXvDVIHd4pAk6G98HL0SwDj7jCvySLOsWP3A2-dLrNeQ/viewform" underline="hover">https://forms.gle/5NhFfL6wZ8bBE9L8A</Link>
+                    リンク: <Link target="_blank" href="https://forms.gle/1ruxmeVn9iT4Sq9J9" underline="hover">https://forms.gle/1ruxmeVn9iT4Sq9J9</Link>
                 </Typography>
                 <Typography variant="h6" ml={2} gutterBottom>
                     ● {t('feedback')}
